@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cansleep.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label layoutX="74.0" layoutY="19.0" text="After">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="minuteTextField" alignment="CENTER" prefHeight="35.0" prefWidth="21.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXTextField>
+                  <Label text="minutes">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="secondTextField" alignment="CENTER" prefHeight="35.0" prefWidth="21.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXTextField>
+                  <Label text="seconds, computer will">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <JFXComboBox fx:id="actionComboBox" focusTraversable="false" prefHeight="44.0" prefWidth="177.0" promptText="Choose an action" stylesheets="@mainmenu.css" />
+               </children>
+            </HBox>
+            <JFXButton onAction="#setButtonClicked" text="Set">
+               <font>
+                  <Font size="18.0" />
+               </font></JFXButton>
+            <HBox fx:id="remainingTimeHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label text="RemainingTime: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="minuteLabel">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="273.0" layoutY="52.0" text=":">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="secondLabel" layoutX="304.0" layoutY="52.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="310.0" layoutY="52.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <JFXButton onAction="#cancelButtonClicked" text="Cancel">
+                     <font>
+                        <Font size="18.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
